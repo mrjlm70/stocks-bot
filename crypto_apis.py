@@ -18,7 +18,7 @@ def get_crypto():
         for symbol in filtered:
             emoji = "🟢📈" if symbol["stats"]["24h_ch"] >= 0 else "🔴📉"
 
-            msg += f"<code>{symbol["symbol"]}: {float(symbol["stats"]["lastPrice"]):,.2f} {emoji}{symbol["stats"]["24h_ch"]}%</code>\n\n"
+            msg += f"<code>{symbol['symbol']}: {float(symbol['stats']['lastPrice']):,.2f} {emoji}{symbol['stats']['24h_ch']}%</code>\n\n"
 
         return msg
     else:
