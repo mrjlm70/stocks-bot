@@ -41,7 +41,7 @@ CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 day_name = weekdays[today.weekday()]
 month_name = months[today.month - 1]
 greeting = f"{day_name} {today.day} {month_name} {today.year} :\n\n"
-msg = greeting + res + res1
+msg = greeting + res 
 
 
 def send_to_telegram(message):
