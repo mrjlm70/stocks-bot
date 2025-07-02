@@ -3,12 +3,12 @@ import requests
 from dotenv import load_dotenv
 import jdatetime
 from crypto_apis import get_crypto
-from bursindex_api import get_bursindex
+# from bursindex_api import get_bursindex
 
 
 today = jdatetime.date.today()
 res = get_crypto()
-res1 = get_bursindex()
+# res1 = get_bursindex()
 months = [
     "فروردین",
     "اردیبهشت",
