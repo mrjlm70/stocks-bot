@@ -4,7 +4,7 @@ import requests
 url = "https://api.wallex.ir/v1/markets"
 response = requests.get(url)
 
-symbols_wanted = ["USDTTMN", "XAUTUSDT", "BTCUSDT","ETHUSDT","TONUSDT","TORNUSDT"."ONDOUSDT"]
+symbols_wanted = ["USDTTMN", "XAUTUSDT", "BTCUSDT","ETHUSDT","TONUSDT","TORNUSDT","ONDOUSDT"]
 
 
 def get_crypto():
