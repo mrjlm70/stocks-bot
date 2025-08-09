@@ -4,7 +4,7 @@ import requests
 url = "https://api.wallex.ir/v1/markets"
 response = requests.get(url)
 
-symbols_wanted = ["USDTTMN", "XAUTUSDT", "BTCUSDT","ETHUSDT","TONUSDT"]
+symbols_wanted = ["USDTTMN", "XAUTUSDT", "BTCUSDT", "ETHUSDT", "TONUSDT"]
 
 
 def get_crypto():
@@ -14,11 +14,12 @@ def get_crypto():
         results = data["result"]["symbols"]
 
         filtered = [results[item] for item in results if item in symbols_wanted]
-        filtered=filtered.sort(key=lambda x: x["symbol"])
-        
+        filtered.sort(key=lambda x: x["symbol"])
+        # print(filtered)
+
         msg = ""
         for symbol in filtered:
-            emoji = '🟢📈' if symbol["stats"]["24h_ch"] >= 0 else '🔴📉'
+            emoji = "🟢📈" if symbol["stats"]["24h_ch"] >= 0 else "🔴📉"
             msg += f"<code>{symbol['symbol']}: {float(symbol['stats']['lastPrice']):,.2f} {emoji}{symbol['stats']['24h_ch']}%</code>\n\n"
 
         return msg

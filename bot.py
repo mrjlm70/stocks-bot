@@ -3,6 +3,7 @@ import requests
 from dotenv import load_dotenv
 import jdatetime
 from crypto_apis import get_crypto
+
 # from bursindex_api import get_bursindex
 
 
@@ -41,7 +42,7 @@ CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 day_name = weekdays[today.weekday()]
 month_name = months[today.month - 1]
 greeting = f"{day_name} {today.day} {month_name} {today.year} :\n\n"
-msg = greeting + res 
+msg = greeting + res
 
 
 def send_to_telegram(message):
@@ -52,3 +53,4 @@ def send_to_telegram(message):
 
 
 send_to_telegram(msg)
+# print(msg)
