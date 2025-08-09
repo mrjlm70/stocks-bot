@@ -13,7 +13,8 @@ def get_crypto():
 
         results = data["result"]["symbols"]
 
-        filtered = [results[item] for item in results if item in symbols_wanted].sort()
+        filtered = [results[item] for item in results if item in symbols_wanted]
+        filtered=filtered.sort()
         
         msg = ""
         for symbol in filtered:
